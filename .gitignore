@@ -1,0 +1,17 @@
+
+# Created by https://www.gitignore.io/api/ansible,visualstudiocode
+
+### Ansible ###
+*.retry
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+### OS X ###
+.DS_Store
+
+# End of https://www.gitignore.io/api/ansible,visualstudiocode
