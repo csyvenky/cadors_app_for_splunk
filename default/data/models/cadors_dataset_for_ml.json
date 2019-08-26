@@ -1,0 +1,196 @@
+{
+    "modelName": "cadors_dataset_for_ml",
+    "displayName": "cadors_dataset_for_ml",
+    "description": "Anomaly Detection Algorithm for Operator",
+    "objectSummary": {
+        "Event-Based": 0,
+        "Transaction-Based": 0,
+        "Search-Based": 1
+    },
+    "objects": [
+        {
+            "objectName": "base_dataset",
+            "displayName": "base_dataset",
+            "parentName": "BaseSearch",
+            "comment": "",
+            "fields": [
+                {
+                    "fieldName": "YearBuilt",
+                    "owner": "base_dataset",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "year_built",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "Fatalities",
+                    "owner": "base_dataset",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "fatalities",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "Injuries",
+                    "owner": "base_dataset",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "injuries",
+                    "comment": ""
+                }
+            ],
+            "calculations": [
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "aircraft_category",
+                            "owner": "base_dataset",
+                            "type": "number",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "aircraft_category",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "mh4s676nj9",
+                    "owner": "base_dataset",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "case(AircraftCategory==\"Aeroplane\",0, AircraftCategory==\"Helicopter\",1,\nAircraftCategory==\"Unmanned Aircraft\",2,\nAircraftCategory==\"Balloon\",3,\nAircraftCategory==\"Advanced Ultralight\",4,\nAircraftCategory==\"Ultralight\",5,\nAircraftCategory==\"Glider\",6)"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "occurrence_type",
+                            "owner": "base_dataset",
+                            "type": "number",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "occurrence_type",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "p873k0bieco",
+                    "owner": "base_dataset",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "case(OccurrenceType==\"Incident\",0, OccurrenceType==\"Accident\",1)"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "province",
+                            "owner": "base_dataset",
+                            "type": "number",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "province",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "ktg35wsudg",
+                    "owner": "base_dataset",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "case(Province==\"British Columbia\",0, Province==\"Alberta\",1, Province==\"Saskatchewan\",2, Province==\"Manitoba\",3, Province==\"Ontario\",4, Province==\"Quebec\",5, Province==\"Nova Scotia\",6, Province==\"New Brunswick\",7, Province==\"Newfoundland and Labrador\",8, Province==\"Prince Edward Island\",9, Province==\"Northwest Territories\",10, Province==\"Nunavut\",11, Province==\"Yukon\",12)"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "day_night",
+                            "owner": "base_dataset",
+                            "type": "number",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "day_night",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "hd01imxa4y",
+                    "owner": "base_dataset",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "case(DayOrNight==\"day-time\",0, DayOrNight==\"night-time\",1)"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "aerodrome_id",
+                            "owner": "base_dataset",
+                            "type": "number",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "aerodrome_id",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "e0eaa96v909",
+                    "owner": "base_dataset",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "case(AerodromeID==\"CYYZ\",0, AerodromeID==\"CYVR\",1, AerodromeID==\"CYYC\",2, AerodromeID==\"CYUL\",3, AerodromeID==\"CYHZ\",4, AerodromeID==\"CYEG\",5, AerodromeID==\"CYWG\",6, AerodromeID==\"CYNJ\",7, AerodromeID==\"CYYJ\",8, AerodromeID==\"CYOW\",9)"
+                },
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "flight_rule",
+                            "owner": "base_dataset",
+                            "type": "number",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "flight_rule",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "eb2l0rwse3m",
+                    "owner": "base_dataset",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "case(FlightRule==\"IFR\",0, FlightRule==\"VFR\",1, FlightRule==\"Unknown\",2)"
+                }
+            ],
+            "constraints": [],
+            "lineage": "base_dataset",
+            "baseSearch": "index=cadors_xml\n| xmlkv"
+        }
+    ],
+    "objectNameList": [
+        "base_dataset"
+    ]
+}
