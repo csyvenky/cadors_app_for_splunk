@@ -24,6 +24,7 @@ export = system
 ### Lookup Tables
 
 [lookups/ourairports_data.csv]
+access = read : [ * ], write : [ admin, power ]
 export = system
 
 ### Lookup Definitions

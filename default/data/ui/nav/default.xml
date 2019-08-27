@@ -5,4 +5,5 @@
   <view name="alerts" />
   <view name="dashboards" />
   <view name="cadors" default='true' />
+  <view name="detailed_cadors_record" />
 </nav>

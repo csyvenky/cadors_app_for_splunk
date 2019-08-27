@@ -33,6 +33,6 @@ The airport details data has been downloaded from **OurAirports.com**. More info
 # Build details (for OS X)
 1. Clone github repo `git clone https://github.com/csyvenky/cadors_app_for_splunk.git`.
 2. Make your enhancements and increase the Build and Version numbers in the ./default/app.conf file.
-3. Make a tarball of the app folder `tar --exclude='cadors_app_for_splunk/.git' -czvf cadors_app_for_splunk.tar.gz cadors_app_for_splunk/`  .
+3. Make a tarball of the app folder `tar --exclude='cadors_app_for_splunk/.git*' --exclude='cadors_app_for_splunk/.DS_Store' -czvf cadors_app_for_splunk.tar.gz cadors_app_for_splunk/`  .
 4. Run AppInspect validation via Postman `http://dev.splunk.com/view/appinspect/SP-CAAAFDU`.
 5. Test the app installation on clean instance of Splunk.

@@ -1,0 +1,473 @@
+<form theme="dark">
+  <label>Report Details</label>
+  <fieldset submitButton="false" autoRun="true">
+    <input type="text" token="cadors_number" searchWhenChanged="true">
+      <label>CADORS Number:</label>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <single>
+        <title>CADORS Number</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.CadorsNumber</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+  <panel>
+      <single>
+        <title>Narrative</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Narratives.RptDetails.Narrative.p</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Categor(ies)</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.OccCategories.RptOccCategory.OccurrenceCategory</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Occurrence Type</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields  RptOccurrence.OccurrenceType</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Occurrence Date</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields  RptOccurrence.OccurrenceDate</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+      <single>
+        <title>Occurrence Time</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields  RptOccurrence.OccurrenceTime</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Day or Night</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields  RptOccurrence.DayOrNight</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Fatalities</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields  RptOccurrence.Fatalities</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+      <single>
+        <title>Injuries</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Injuries</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Aerodrome ID</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.AerodromeID</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+      <single>
+        <title>Aerodrome Name</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.AerodromeName</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Occurrence Location</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.OccurrenceLocation</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Province</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Country</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>TC Region</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.TCRegion</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>World Area</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.WorldRegion</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>TSB Class</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.TSBClassOfInvestigation</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>TSB Number</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.TSBOccurrence</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.OccEvents.RptOccEvent.OccEventName</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Registration Mark</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.Mark</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Foreign Registration</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.ForeignRegistration</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Flight #</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.FlightNumber</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Flight Rules</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.FlightRule</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Aircraft Category</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.AircraftCategory</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Aircraft Country</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.AircraftCountry</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Aircraft Make</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.AircraftMake</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Aircraft Model</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.AircraftModel</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Year Built</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.YearBuilt</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Amateur Built</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.AmateurBuilt</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Engine Make</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.EngineMake</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Engine Model</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.EngineModel</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Engine Type</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.EngineType</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Gear Type</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.GearType</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Phase of Flight</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.PhaseOfFlight</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Damage</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.Damage</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Owner</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.Owner</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>Operator</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.OperatorName</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Operator Type</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.OperatorType</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+        <option name="useThousandSeparators">0</option>
+      </single>
+    </panel>
+    <panel>
+      <single>
+        <title>CARs Subpart</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.CARsSector</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Aircraft Event Information</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Aircrafts.RptAircraft.Events.RptAcftEvent.AircraftEventName</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Date Entered</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Narratives.RptDetails.DateEntered</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <single>
+        <title>Further Action Required</title>
+        <search>
+          <query>(`cadors_index` sourcetype="cadors_xml") RptOccurrence.CadorsNumber=$cadors_number$ | fields RptOccurrence.Narratives.RptDetails.FurtherActionRequired</query>
+          <earliest>0</earliest>
+          <latest></latest>
+        </search>
+      </single>
+    </panel>
+  </row>
+</form>
