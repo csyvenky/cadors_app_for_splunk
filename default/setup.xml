@@ -1,0 +1,9 @@
+<setup>
+    <block title="inputs_conf" endpoint="properties/inputs" entity="  ">
+        . . .
+    </block>
+</setup>
+
+<!--
+## is this the correct end point?   https://localhost:8089/servicesNS/nobody/all_cadors/properties/inputs/monitor%3A%2F%2F%2FUsers%2Fcory%2FDocuments%2FOneDrive%20-%20Force%201024%2FAttachments%2FALL_CADORS%2F
+-->
