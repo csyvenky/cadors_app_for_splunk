@@ -1,9 +1,21 @@
 <setup>
-    <block title="inputs_conf" endpoint="properties/inputs" entity="  ">
-        . . .
+    <block title="Monitor CADORS Reports" endpoint="data/inputs/monitor">
+        <text>Enter the full path to the directory that contains the CADORS data files. These files should all be in the native XML format that came from Transport Canada.</text>
+        <!-- <input field="_new">
+            <label>Path to CADORS data files [$name$] : $<field_name>$</label>
+            <type>text</type>
+        </input> -->
+        <input entity="/" field="enabled">
+            <label>Disabled by Default [$name$]:</label>
+            <type>bool</type>
+        </input>
     </block>
-</setup>
 
-<!--
-## is this the correct end point?   https://localhost:8089/servicesNS/nobody/all_cadors/properties/inputs/monitor%3A%2F%2F%2FUsers%2Fcory%2FDocuments%2FOneDrive%20-%20Force%201024%2FAttachments%2FALL_CADORS%2F
--->
+    <!-- <block title="Monitor CADORS Reports" endpoint="configs/conf-macros" entity="cadors_index">
+        <text>Macro Settings</text>
+        <input field="iseval">
+            <label>Macro Value [$name$]:</label>
+            <type>text</type>
+        </input>
+    </block> -->
+</setup>
