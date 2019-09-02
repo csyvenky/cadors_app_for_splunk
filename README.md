@@ -24,7 +24,7 @@ A Splunk app to process Transport Canada Aviation Safety Data
 1. Select **Apps** | **CADORS App for Splunk**.
 
 # Data Download and Cleanse Workflow
-To use this app, the raw data file from Transport Canada needs to be downloaded.
+To use this app, the raw data file from Transport Canada needs to be downloaded. You can subscribe to Transport Canada daily emails. No additional cleansing is required, the app can process the data in the XML format it originates in.
 
 # Credit for External Lookup Data
 The airport details data has been downloaded from **OurAirports.com**. More information on the project and the Public Domain license can be found [here](http://ourairports.com/data/).
