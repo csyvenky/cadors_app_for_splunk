@@ -1,4 +1,4 @@
-<setup>
+<!-- <setup>
     <block title="Monitor CADORS Reports" endpoint="data/inputs/monitor">
         <text>Enter the full path to the directory that contains the CADORS data files. These files should all be in the native XML format that came from Transport Canada.</text>
         <!-- <input field="_new">
@@ -18,4 +18,4 @@
             <type>text</type>
         </input>
     </block> -->
-</setup>
+</setup> -->
