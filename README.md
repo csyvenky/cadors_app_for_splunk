@@ -9,17 +9,16 @@ A Splunk app to process Transport Canada Aviation Safety Data
 5. Restart Splunk.
 
 # Add the CADORS Data (XML)
-1. Click **Add Data** on the Launcher homepage.
-2. Click **Upload files from my computer**.
-3. Click **Select File**.
-4. Navigate to the location of the **CADORS_NATIONAL_{yyyymmdd}_E.xml** data files. You can have Transport Canada send you daily emails - simply subscribe to the CADORS reports.
+1. Click **Settings**, **Data inputs**
+2. Click **Files & Directories**.
+3. Click the **New Local File & Directory** button.
+4. Use the browse button to navigate to the location of the **CADORS_NATIONAL_{yyyymmdd}_E.xml** data files. You can subscribe to Transport Canada daily emails.
 5. Click **Next**.
-6. For **Source type**, click **Custom**, then select **cadors_xml**.
-7. Click **Next**.
-8. For **Index**, click **Create a new index**, set **Index Name** to **cadors_xml**, set **Max Size of Entire Index** to **100MB**, set **App** to **CADORS App for Splunk**.
-9. Click **Save**.
-10. Click **Review**.
-11. Click **Submit**.
+6. For **Source type**, select **cadors_xml**.
+7. For **Index**, click **Create a new index**, set **Index Name** to **cadors_xml**, set **Max Size of Entire Index** to **100MB**, set **App** to **CADORS App for Splunk**.
+8. Click **Save**.
+9. Click **Review**.
+10. Click **Submit**.
 
 # Access the main Dashboard
 1. Select **Apps** | **CADORS App for Splunk**.
